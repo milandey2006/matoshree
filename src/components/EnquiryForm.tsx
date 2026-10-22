@@ -3,9 +3,9 @@
 import { COMPANY } from "@/lib/company";
 
 const INTENTS = [
-  "Sell scrap bottles / plastic waste",
+  "Sell scrap PET bottles",
+  "Buy PET chips",
   "Buy PET plastic rolls",
-  "Buy plastic chips",
   "Something else",
 ];
 
@@ -93,7 +93,7 @@ export default function EnquiryForm() {
 
       <label className="field">
         <span>Material and approximate quantity</span>
-        <input name="material" placeholder="e.g. PET bottle scrap, about 5 tonnes a month" />
+        <input name="material" placeholder="e.g. baled clear PET bottles, about 5 tonnes a month" />
       </label>
 
       <label className="field">

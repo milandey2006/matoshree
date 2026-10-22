@@ -1,34 +1,86 @@
 import SiteHeader from "@/components/SiteHeader";
 import EnquiryForm from "@/components/EnquiryForm";
-import RecyclingIllustration from "@/components/RecyclingIllustration";
+import Image from "next/image";
+import {
+  IconBale,
+  IconChips,
+  IconCollect,
+  IconCrush,
+  IconProducts,
+  IconSort,
+  IconWash,
+} from "@/components/ProcessIcons";
 import { COMPANY } from "@/lib/company";
 
 const FLOW = [
-  { t: "Scrap bottles & plastic waste", d: "Collected from suppliers and business partners." },
-  { t: "Plastic chips", d: "Plastic waste broken down into small particles." },
-  { t: "PET plastic rolls", d: "Manufactured from scrap PET bottles." },
-  { t: "Trading", d: "Plastic bottle rolls supplied to buyers." },
+  { t: "Scrap PET trading", d: "We buy used PET bottles from collectors and suppliers." },
+  { t: "Sorting & baling", d: "Caps, labels and bottles separated, then pressed into bales." },
+  { t: "Crushing & washing", d: "Bales crushed into pieces and washed clean." },
+  { t: "PET chips & rolls", d: "Clean chips and PET rolls supplied to buyers." },
+];
+
+const PROCESS: { Icon: () => React.JSX.Element; t: string; d: string; tags?: string[] }[] = [
+  {
+    Icon: IconCollect,
+    t: "Collection & trading",
+    d: "We buy post-consumer PET bottles in bulk from scrap dealers, collectors and suppliers, and trade sorted scrap.",
+  },
+  {
+    Icon: IconSort,
+    t: "Manual sorting",
+    d: "Each lot is sorted by hand. Caps, rings and labels come off, and bottles are graded by colour.",
+    tags: ["Caps", "Labels & stickers", "Clear", "Blue", "Green"],
+  },
+  {
+    Icon: IconBale,
+    t: "Baling",
+    d: "Sorted bottles are pressed into dense, strapped cubes that are easy to store, weigh and transport.",
+  },
+  {
+    Icon: IconCrush,
+    t: "Crushing",
+    d: "Bales are opened and the bottles crushed into small, even pieces.",
+  },
+  {
+    Icon: IconWash,
+    t: "Washing",
+    d: "The pieces are washed to remove dirt, glue and leftover label and cap material.",
+  },
+  {
+    Icon: IconChips,
+    t: "PET chips",
+    d: "Clean, dried chips (also called flakes) are packed by colour and grade.",
+  },
+  {
+    Icon: IconProducts,
+    t: "End products",
+    d: "Chips go to manufacturers as raw material, and into the PET plastic rolls we make and trade.",
+  },
 ];
 
 const WORK = [
   {
+    t: "Scrap PET bottle trading",
+    d: "We buy used PET bottles in bulk and supply sorted, baled scrap to recyclers.",
+  },
+  {
+    t: "PET chips from plastic waste",
+    d: "Sorted bottles are crushed and washed into clean PET chips, ready to be used again.",
+  },
+  {
+    t: "PET plastic rolls",
+    d: "We manufacture PET plastic rolls from scrap bottles, giving discarded bottles a second use.",
+  },
+  {
     t: "Trading of plastic bottle rolls",
     d: "We buy and sell plastic bottle rolls, supplying them to businesses that need them.",
-  },
-  {
-    t: "Manufacturing PET plastic rolls from scrap bottles",
-    d: "We turn scrap PET bottles into plastic rolls, giving discarded bottles a second use.",
-  },
-  {
-    t: "Converting plastic waste into plastic chips",
-    d: "We break plastic waste down into small particles, known as plastic chips, ready to be used again.",
   },
 ];
 
 const PRINCIPLES = [
-  { t: "Responsible handling", d: "Plastic waste handled with care and put to productive reuse." },
-  { t: "Clear communication", d: "Professional, transparent communication on every deal." },
-  { t: "Reliable coordination", d: "Dependable follow-through with customers, suppliers and partners." },
+  { t: "Fair weight, fair price", d: "Every lot weighed and graded in the open, with clear rates." },
+  { t: "Clean separation", d: "Caps, labels and colours kept apart, so the output stays consistent." },
+  { t: "Reliable coordination", d: "Dependable pickups, dispatches and follow-through on every deal." },
   { t: "Long-term relationships", d: "Built on reliability and growth on both sides." },
 ];
 
@@ -44,17 +96,16 @@ export default function Home() {
         {/* Hero */}
         <section className="hero" id="top">
           <div className="wrap">
-            <p className="kicker">PET plastic rolls · Plastic chips · Trading</p>
+            <p className="kicker">Scrap PET bottles · PET chips · PET rolls</p>
             <h1>
-              Plastic waste, <em>put back to work.</em>
+              Scrap PET bottles, <em>put back to work.</em>
             </h1>
 
             <div className="hero__grid">
               <p className="hero__lead">
-                Matoshree Polymers turns scrap PET bottles into plastic rolls, converts plastic
-                waste into plastic chips, and trades in plastic bottle rolls. We work with
-                suppliers, buyers and partners who want a dependable counterpart for recycled
-                plastic.
+                Matoshree Polymers buys and trades scrap PET bottles, sorts and bales them, and
+                turns them into clean PET chips and plastic rolls. We work with scrap suppliers,
+                recyclers and manufacturers who want a dependable partner for recycled PET.
               </p>
 
               <div className="hero__actions">
@@ -91,14 +142,25 @@ export default function Home() {
               </h2>
             </div>
             <div className="company-body">
-              <RecyclingIllustration />
+              <figure className="photo">
+                <Image
+                  src="/flakes.jpg"
+                  alt="Bulk bags and bins filled with washed PET chips"
+                  width={1200}
+                  height={896}
+                  sizes="(max-width: 860px) 100vw, 600px"
+                />
+                <figcaption>Washed PET chips, the output of the process. Representative image.</figcaption>
+              </figure>
               <div className="prose">
                 <p className="prose__lead">
-                  Matoshree Polymers Pvt. Ltd. manufactures PET plastic rolls from scrap bottles,
-                  converts plastic waste into plastic chips, and trades in plastic bottle rolls.
+                  Matoshree Polymers Pvt. Ltd. trades in scrap PET bottles and turns them into
+                  clean PET chips and plastic rolls.
                 </p>
                 <p>
-                  Our aim is simple: recover plastic that would otherwise be discarded, and put it
+                  Used bottles come in from scrap dealers and collectors. We sort them by hand,
+                  bale them, crush and wash them, and send the clean material back into
+                  manufacturing. Our aim is simple: recover plastic that would otherwise be discarded, and put it
                   back into productive use. Along the way we want to be a business that customers,
                   suppliers and partners can rely on, deal after deal.
                 </p>
@@ -108,13 +170,58 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Process */}
+        <section className="section section--tint" id="process">
+          <div className="wrap">
+            <div className="section-head">
+              <p className="section-label">02 — Process</p>
+              <h2>
+                From scrap bottle <em>to clean PET chips.</em>
+              </h2>
+              <p className="section-intro">
+                Every lot goes through the same seven steps, so buyers get material that is sorted,
+                clean and consistent.
+              </p>
+            </div>
+            <ol className="process">
+              {PROCESS.map(({ Icon, t, d, tags }, i) => (
+                <li key={t} className="step">
+                  <div className="step__icon">
+                    <Icon />
+                  </div>
+                  <div className="step__body">
+                    <p className="step__n">Step {String(i + 1).padStart(2, "0")}</p>
+                    <h3>{t}</h3>
+                    <p>{d}</p>
+                    {tags && (
+                      <ul className="step__tags" aria-label="Sorted into">
+                        {tags.map((tag) => (
+                          <li key={tag}>{tag}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </li>
+              ))}
+              <li className="step step--cta">
+                <p className="step__n">Have scrap to sell?</p>
+                <h3>We buy PET bottles in bulk.</h3>
+                <p>Tell us the type, condition and approximate quantity, and we will quote a rate.</p>
+                <a className="btn btn--light" href="#contact">
+                  Get a rate
+                </a>
+              </li>
+            </ol>
+          </div>
+        </section>
+
         {/* What we do */}
         <section className="section" id="work">
           <div className="wrap">
             <div className="section-head">
-              <p className="section-label">02 — What we do</p>
+              <p className="section-label">03 — What we do</p>
               <h2>
-                Three lines of work, <em>one material.</em>
+                Four lines of work, <em>one material.</em>
               </h2>
             </div>
             <ol className="work-list">
@@ -127,7 +234,7 @@ export default function Home() {
               ))}
             </ol>
             <p className="work-cta">
-              Have scrap bottles to sell, or need PET rolls or plastic chips?{" "}
+              Have scrap PET bottles to sell, or need PET chips or rolls?{" "}
               <a className="link-arrow" href="#contact">
                 Tell us the type and quantity
               </a>
@@ -136,10 +243,10 @@ export default function Home() {
         </section>
 
         {/* How we work */}
-        <section className="section section--tint" id="approach">
+        <section className="section" id="approach">
           <div className="wrap">
             <div className="section-head">
-              <p className="section-label">03 — How we work</p>
+              <p className="section-label">04 — How we work</p>
               <h2>
                 What partners can <em>expect from us.</em>
               </h2>
@@ -159,7 +266,7 @@ export default function Home() {
         <section className="section" id="contact">
           <div className="wrap">
             <div className="section-head">
-              <p className="section-label">04 — Contact</p>
+              <p className="section-label">05 — Contact</p>
               <h2>
                 Tell us what you have, <em>or what you need.</em>
               </h2>
