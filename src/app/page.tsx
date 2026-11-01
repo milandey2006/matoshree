@@ -1,5 +1,6 @@
 import SiteHeader from "@/components/SiteHeader";
 import EnquiryForm from "@/components/EnquiryForm";
+import Image from "next/image";
 import {
   IconBale,
   IconChips,
@@ -133,6 +134,16 @@ export default function Home() {
               </h2>
             </div>
             <div className="company-body">
+              <figure className="process-anim">
+                <Image
+                  src="/process-loop.svg"
+                  alt="Animation of the process: bottles on a belt are baled, crushed into flakes and packed into a bulk bag"
+                  width={960}
+                  height={200}
+                  unoptimized
+                />
+                <figcaption>From scrap bottle to clean PET chips.</figcaption>
+              </figure>
               <div className="prose">
                 <p className="prose__lead">
                   Matoshree Polymers Pvt. Ltd. trades in scrap PET bottles and turns them into

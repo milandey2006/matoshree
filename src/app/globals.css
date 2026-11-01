@@ -367,7 +367,28 @@ button, input, textarea, select { font: inherit; color: inherit; }
 }
 .section h2 em { font-style: italic; color: var(--green); }
 
-.company-body { display: flex; justify-content: center; }
+.company-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(40px, 6vw, 80px);
+}
+
+.process-anim { width: 100%; }
+.process-anim img { width: 100%; height: auto; }
+.process-anim figcaption {
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .company-body { grid-template-columns: 1fr; justify-items: center; }
+  .process-anim { max-width: 760px; }
+}
 
 .section h2.h2--two-line { max-width: none; }
 

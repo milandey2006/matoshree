@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 100 960 200" role="img" aria-label="Animation: scrap PET bottles move along a belt, are baled, crushed into flakes and packed into a bulk bag">
+<style>
+  .spin-fast { animation: spin 1.5s linear infinite; }
+  .gear-a { animation: spin 9s linear infinite reverse; }
+  .gear-b { animation: spin 9s linear infinite; }
+  .row1 { animation: row1 9s linear infinite; }
+  .row2 { animation: row2 3s linear infinite; }
+  .row3 { animation: row3 3s linear infinite; }
+  .ram { animation: ram 3s ease-in-out infinite; }
+  .lamp { animation: lamp 3s ease-in-out infinite; }
+  .drop { transform-box: fill-box; transform-origin: center; animation: drop 1.5s linear infinite; }
+  .bagdrop { transform-box: fill-box; transform-origin: center; animation: bagdrop 1.5s ease-in infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes row1 { to { transform: translateX(240px); } }
+  @keyframes row2 { to { transform: translateX(120px); } }
+  @keyframes row3 { to { transform: translateX(66px); } }
+  @keyframes ram { 0%, 25% { transform: translateY(0); } 50%, 60% { transform: translateY(20px); } 85%, 100% { transform: translateY(0); } }
+  @keyframes lamp { 0%, 30% { opacity: .25; } 50%, 60% { opacity: 1; } 85%, 100% { opacity: .25; } }
+  @keyframes drop {
+    0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+    12% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { transform: translate(12px, 40px) rotate(140deg); opacity: 0; }
+  }
+  @keyframes bagdrop {
+    0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+    12% { opacity: 1; }
+    50% { transform: translate(20px, 2px) rotate(70deg); }
+    85% { opacity: 1; }
+    100% { transform: translate(36px, 30px) rotate(150deg); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<defs>
+  <g id="bottle" stroke-width="1.125">
+    <path d="M-2.5 4 V7 C-2.5 9.5 -6 10.5 -6 14 V28 Q-6 30 -4 30 H4 Q6 30 6 28 V14 C6 10.5 2.5 9.5 2.5 7 V4 Z"/>
+    <path d="M-6 18 H6 M-6 24 H6" fill="none"/>
+    <rect x="-3" y="0" width="6" height="4" rx="0.8" fill="#22593a"/>
+  </g>
+  <g id="bale" stroke-width="2.4">
+    <path d="M40 14 L66 27 L40 40 L14 27 Z" fill="#e8eef0"/>
+    <path d="M14 27 L40 40 V68 L14 55 Z" fill="#e8eef0"/>
+    <path d="M40 40 L66 27 V55 L40 68 Z" fill="#cfdccd"/>
+    <path d="M17 37 C21 36 23 42 27 41 C31 40 33 46 37 46 M17 47 C21 46 23 52 27 51 C31 50 33 56 37 56 M43 51 C46 46 49 51 52 46 C55 41 58 46 63 40" fill="none" stroke-width="1.8"/>
+    <path d="M22.7 22.7 L48.7 35.7 V63.7 M31.3 18.3 L57.3 31.3 V59.3" fill="none" stroke="#22593a" stroke-width="3.4"/>
+  </g>
+  <clipPath id="clip1"><rect x="44" y="120" width="336" height="140"/></clipPath>
+  <clipPath id="clip2"><rect x="492" y="180" width="140" height="80"/></clipPath>
+  <clipPath id="clip3"><rect x="0" y="-40" width="168" height="40"/></clipPath>
+  <clipPath id="clipWin"><rect x="396" y="184" width="72" height="56"/></clipPath>
+</defs>
+<rect width="960" height="320" fill="#f4f2ec"/>
+<g fill="none" stroke="#161d18" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+
+<path d="M0 290 H960"/>
+<path d="M90 244 V290 M300 244 V290"/>
+<rect x="40" y="232" width="340" height="12" rx="6" fill="#cfdccd"/>
+<g transform="translate(60 238)"><g class="spin-fast"><circle r="3.6" fill="#f4f2ec"/><path d="M-3.6 0 H3.6 M0 -3.6 V3.6" stroke-width="1.2"/></g></g>
+<g transform="translate(140 238)"><g class="spin-fast"><circle r="3.6" fill="#f4f2ec"/><path d="M-3.6 0 H3.6 M0 -3.6 V3.6" stroke-width="1.2"/></g></g>
+<g transform="translate(220 238)"><g class="spin-fast"><circle r="3.6" fill="#f4f2ec"/><path d="M-3.6 0 H3.6 M0 -3.6 V3.6" stroke-width="1.2"/></g></g>
+<g transform="translate(300 238)"><g class="spin-fast"><circle r="3.6" fill="#f4f2ec"/><path d="M-3.6 0 H3.6 M0 -3.6 V3.6" stroke-width="1.2"/></g></g>
+<g clip-path="url(#clip1)"><g class="row1">
+<use href="#bottle" xlink:href="#bottle" fill="#e8eef0" transform="translate(372 184) scale(1.6)"/>
+<use href="#bottle" xlink:href="#bottle" fill="#cfdccd" transform="translate(292 184) scale(1.6)"/>
+<use href="#bottle" xlink:href="#bottle" fill="#d5e3ea" transform="translate(212 184) scale(1.6)"/>
+<use href="#bottle" xlink:href="#bottle" fill="#e8eef0" transform="translate(132 184) scale(1.6)"/>
+<use href="#bottle" xlink:href="#bottle" fill="#cfdccd" transform="translate(52 184) scale(1.6)"/>
+<use href="#bottle" xlink:href="#bottle" fill="#d5e3ea" transform="translate(-28 184) scale(1.6)"/>
+<use href="#bottle" xlink:href="#bottle" fill="#e8eef0" transform="translate(-108 184) scale(1.6)"/>
+</g></g>
+<path d="M14 196 Q41 186 70 196 Q41 204 14 196 Z" fill="#e9e6dc"/>
+<use href="#bottle" xlink:href="#bottle" fill="#e8eef0" transform="translate(30 168) rotate(-16) scale(1.4)"/>
+<use href="#bottle" xlink:href="#bottle" fill="#d5e3ea" transform="translate(54 164) rotate(12) scale(1.4)"/>
+<path d="M14 196 Q41 204 70 196 C77 220 79 260 72 286 Q41 294 10 286 C4 260 6 220 14 196 Z" fill="#cfdccd"/>
+<path d="M12 228 Q41 236 72 228 M10 258 Q41 266 74 258" stroke-dasharray="3 5"/>
+<rect x="372" y="150" width="120" height="140" rx="3" fill="#e9e6dc"/>
+<rect x="396" y="184" width="72" height="56" fill="#e8eef0"/>
+<path d="M402 232 C410 224 416 236 424 228 C432 220 438 234 446 226 C452 220 458 230 462 226" stroke-width="1.4"/>
+<path d="M402 238 C412 232 418 240 428 236 C438 232 444 240 462 234" stroke-width="1.4"/>
+<g clip-path="url(#clipWin)"><g class="ram">
+<path d="M432 150 V196" stroke-width="3"/>
+<rect x="402" y="196" width="60" height="7" rx="1.5" fill="#22593a"/>
+</g></g>
+<rect x="396" y="184" width="72" height="56"/>
+<rect x="416" y="118" width="32" height="32" rx="3" fill="#e9e6dc"/>
+<path d="M410 118 H454"/>
+<circle cx="480" cy="166" r="4.5" fill="#22593a" class="lamp"/>
+<path d="M384 258 H480" stroke-width="1.4"/>
+<path d="M520 262 V290 M600 262 V290"/>
+<rect x="488" y="252" width="140" height="10" rx="5" fill="#cfdccd"/>
+<g transform="translate(512 257)"><g class="spin-fast"><circle r="3" fill="#f4f2ec"/><path d="M-3 0 H3 M0 -3 V3" stroke-width="1.2"/></g></g>
+<g transform="translate(562 257)"><g class="spin-fast"><circle r="3" fill="#f4f2ec"/><path d="M-3 0 H3 M0 -3 V3" stroke-width="1.2"/></g></g>
+<g transform="translate(612 257)"><g class="spin-fast"><circle r="3" fill="#f4f2ec"/><path d="M-3 0 H3 M0 -3 V3" stroke-width="1.2"/></g></g>
+<g clip-path="url(#clip2)"><g class="row2">
+<use href="#bale" xlink:href="#bale" transform="translate(332 252) scale(0.75) translate(-14 -68)"/>
+<use href="#bale" xlink:href="#bale" transform="translate(452 252) scale(0.75) translate(-14 -68)"/>
+<use href="#bale" xlink:href="#bale" transform="translate(572 252) scale(0.75) translate(-14 -68)"/>
+</g></g>
+<rect x="620" y="170" width="64" height="120" rx="3" fill="#e9e6dc"/>
+<path d="M612 170 H692"/>
+<g transform="translate(652 209)"><g class="gear-a"><path d="M3.75,19.65 L2.67,24.86 L-2.67,24.86 L-3.75,19.65 L-8.52,18.10 L-12.45,21.68 L-16.77,18.54 L-14.58,13.69 L-17.53,9.64 L-22.82,10.22 L-24.46,5.15 L-19.84,2.51 L-19.84,-2.51 L-24.46,-5.15 L-22.82,-10.22 L-17.53,-9.64 L-14.58,-13.69 L-16.77,-18.54 L-12.45,-21.68 L-8.52,-18.10 L-3.75,-19.65 L-2.67,-24.86 L2.67,-24.86 L3.75,-19.65 L8.52,-18.10 L12.45,-21.68 L16.77,-18.54 L14.58,-13.69 L17.53,-9.64 L22.82,-10.22 L24.46,-5.15 L19.84,-2.51 L19.84,2.51 L24.46,5.15 L22.82,10.22 L17.53,9.64 L14.58,13.69 L16.77,18.54 L12.45,21.68 L8.52,18.10 Z" fill="#cfdccd"/><circle r="5" fill="#22593a"/></g></g>
+<g transform="translate(652 255)"><g class="gear-b"><path d="M2.51,-19.84 L5.15,-24.46 L10.22,-22.82 L9.64,-17.53 L13.69,-14.58 L18.54,-16.77 L21.68,-12.45 L18.10,-8.52 L19.65,-3.75 L24.86,-2.67 L24.86,2.67 L19.65,3.75 L18.10,8.52 L21.68,12.45 L18.54,16.77 L13.69,14.58 L9.64,17.53 L10.22,22.82 L5.15,24.46 L2.51,19.84 L-2.51,19.84 L-5.15,24.46 L-10.22,22.82 L-9.64,17.53 L-13.69,14.58 L-18.54,16.77 L-21.68,12.45 L-18.10,8.52 L-19.65,3.75 L-24.86,2.67 L-24.86,-2.67 L-19.65,-3.75 L-18.10,-8.52 L-21.68,-12.45 L-18.54,-16.77 L-13.69,-14.58 L-9.64,-17.53 L-10.22,-22.82 L-5.15,-24.46 L-2.51,-19.84 Z" fill="#cfdccd"/><circle r="5" fill="#22593a"/></g></g>
+<g transform="translate(686 228)"><polygon class="drop" style="animation-delay:-0s" points="0,0 9,-2 10.5,5 1.5,6.5" fill="#22593a" stroke-width="1.4"/></g>
+<g transform="translate(689 228)"><polygon class="drop" style="animation-delay:-0.5s" points="0,0 9,-2 10.5,5 1.5,6.5" fill="#e8eef0" stroke-width="1.4"/></g>
+<g transform="translate(692 228)"><polygon class="drop" style="animation-delay:-1.0s" points="0,0 9,-2 10.5,5 1.5,6.5" fill="#cfdccd" stroke-width="1.4"/></g>
+<path d="M726.5 268 V290 M818 227 V290"/>
+<g transform="translate(690 280) rotate(-24)">
+<rect x="0" y="-10" width="170" height="10" rx="5" fill="#cfdccd"/>
+<g transform="translate(12 -5)"><g class="spin-fast"><circle r="3" fill="#f4f2ec"/><path d="M-3 0 H3 M0 -3 V3" stroke-width="1.2"/></g></g>
+<g transform="translate(85 -5)"><g class="spin-fast"><circle r="3" fill="#f4f2ec"/><path d="M-3 0 H3 M0 -3 V3" stroke-width="1.2"/></g></g>
+<g transform="translate(158 -5)"><g class="spin-fast"><circle r="3" fill="#f4f2ec"/><path d="M-3 0 H3 M0 -3 V3" stroke-width="1.2"/></g></g>
+<g clip-path="url(#clip3)"><g class="row3">
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(-66 -17)" fill="#22593a" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(-44 -17)" fill="#cfdccd" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(-22 -17)" fill="#e8eef0" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(0 -17)" fill="#22593a" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(22 -17)" fill="#cfdccd" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(44 -17)" fill="#e8eef0" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(66 -17)" fill="#22593a" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(88 -17)" fill="#cfdccd" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(110 -17)" fill="#e8eef0" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(132 -17)" fill="#22593a" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(154 -17)" fill="#cfdccd" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(176 -17)" fill="#e8eef0" stroke-width="1.4"/>
+</g></g></g>
+<g transform="translate(846 198)"><polygon class="bagdrop" style="animation-delay:-0s" points="0,0 9,-2 10.5,5 1.5,6.5" fill="#cfdccd" stroke-width="1.4"/></g>
+<g transform="translate(846 200)"><polygon class="bagdrop" style="animation-delay:-0.5s" points="0,0 9,-2 10.5,5 1.5,6.5" fill="#22593a" stroke-width="1.4"/></g>
+<g transform="translate(846 202)"><polygon class="bagdrop" style="animation-delay:-1.0s" points="0,0 9,-2 10.5,5 1.5,6.5" fill="#e8eef0" stroke-width="1.4"/></g>
+<path d="M862 232 Q866 210 880 228 M912 228 Q926 210 930 232" stroke="#22593a" stroke-width="2.4"/>
+<path d="M858 230 Q896 208 934 230 Z" fill="#e8eef0"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(872 222) rotate(-10)" fill="#22593a" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(888 216) rotate(15)" fill="#cfdccd" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(904 218) rotate(-20)" fill="#22593a" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(918 224) rotate(10)" fill="#cfdccd" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(894 225) rotate(30)" fill="#e8eef0" stroke-width="1.4"/>
+<path d="M856 286 V236 Q856 228 864 228 H928 Q936 228 936 236 V286 Z" fill="#e8eef0"/>
+<rect x="878" y="246" width="36" height="22" rx="1.5" fill="#cfdccd"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(884 252)" fill="#22593a" stroke-width="1.4"/>
+<polygon points="0,0 9,-2 10.5,5 1.5,6.5" transform="translate(897 253) rotate(20)" fill="#22593a" stroke-width="1.4"/>
+<rect x="850" y="284" width="92" height="6" fill="#e9e6dc"/>
+</g></svg>
