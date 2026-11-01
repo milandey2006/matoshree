@@ -1,13 +1,12 @@
 import SiteHeader from "@/components/SiteHeader";
 import EnquiryForm from "@/components/EnquiryForm";
-import Image from "next/image";
 import {
   IconBale,
   IconChips,
   IconCollect,
   IconCrush,
-  IconProducts,
   IconSort,
+  IconSupply,
   IconWash,
 } from "@/components/ProcessIcons";
 import { COMPANY } from "@/lib/company";
@@ -16,7 +15,7 @@ const FLOW = [
   { t: "Scrap PET trading", d: "We buy used PET bottles from collectors and suppliers." },
   { t: "Sorting & baling", d: "Caps, labels and bottles separated, then pressed into bales." },
   { t: "Crushing & washing", d: "Bales crushed into pieces and washed clean." },
-  { t: "PET chips & rolls", d: "Clean chips and PET rolls supplied to buyers." },
+  { t: "Clean PET chips", d: "Washed chips supplied to manufacturers as raw material." },
 ];
 
 const PROCESS: { Icon: () => React.JSX.Element; t: string; d: string; tags?: string[] }[] = [
@@ -52,9 +51,9 @@ const PROCESS: { Icon: () => React.JSX.Element; t: string; d: string; tags?: str
     d: "Clean, dried chips (also called flakes) are packed by colour and grade.",
   },
   {
-    Icon: IconProducts,
-    t: "End products",
-    d: "Chips go to manufacturers as raw material, and into the PET plastic rolls we make and trade.",
+    Icon: IconSupply,
+    t: "Supply to buyers",
+    d: "Clean chips are dispatched to manufacturers, who use them as raw material for new products.",
   },
 ];
 
@@ -64,16 +63,8 @@ const WORK = [
     d: "We buy used PET bottles in bulk and supply sorted, baled scrap to recyclers.",
   },
   {
-    t: "PET chips from plastic waste",
-    d: "Sorted bottles are crushed and washed into clean PET chips, ready to be used again.",
-  },
-  {
-    t: "PET plastic rolls",
-    d: "We manufacture PET plastic rolls from scrap bottles, giving discarded bottles a second use.",
-  },
-  {
-    t: "Trading of plastic bottle rolls",
-    d: "We buy and sell plastic bottle rolls, supplying them to businesses that need them.",
+    t: "PET chips from scrap bottles",
+    d: "Sorted bottles are crushed and washed into clean PET chips, supplied to manufacturers as raw material.",
   },
 ];
 
@@ -96,7 +87,7 @@ export default function Home() {
         {/* Hero */}
         <section className="hero" id="top">
           <div className="wrap">
-            <p className="kicker">Scrap PET bottles · PET chips · PET rolls</p>
+            <p className="kicker">Scrap PET bottles · Sorting & baling · PET chips</p>
             <h1>
               Scrap PET bottles, <em>put back to work.</em>
             </h1>
@@ -104,7 +95,7 @@ export default function Home() {
             <div className="hero__grid">
               <p className="hero__lead">
                 Matoshree Polymers buys and trades scrap PET bottles, sorts and bales them, and
-                turns them into clean PET chips and plastic rolls. We work with scrap suppliers,
+                turns them into clean PET chips. We work with scrap suppliers,
                 recyclers and manufacturers who want a dependable partner for recycled PET.
               </p>
 
@@ -142,20 +133,10 @@ export default function Home() {
               </h2>
             </div>
             <div className="company-body">
-              <figure className="photo">
-                <Image
-                  src="/flakes.jpg"
-                  alt="Bulk bags and bins filled with washed PET chips"
-                  width={1200}
-                  height={896}
-                  sizes="(max-width: 860px) 100vw, 600px"
-                />
-                <figcaption>Washed PET chips, the output of the process. Representative image.</figcaption>
-              </figure>
               <div className="prose">
                 <p className="prose__lead">
                   Matoshree Polymers Pvt. Ltd. trades in scrap PET bottles and turns them into
-                  clean PET chips and plastic rolls.
+                  clean PET chips.
                 </p>
                 <p>
                   Used bottles come in from scrap dealers and collectors. We sort them by hand,
@@ -221,7 +202,7 @@ export default function Home() {
             <div className="section-head">
               <p className="section-label">03 — What we do</p>
               <h2>
-                Four lines of work, <em>one material.</em>
+                Two lines of work, <em>one material.</em>
               </h2>
             </div>
             <ol className="work-list">
@@ -234,7 +215,7 @@ export default function Home() {
               ))}
             </ol>
             <p className="work-cta">
-              Have scrap PET bottles to sell, or need PET chips or rolls?{" "}
+              Have scrap PET bottles to sell, or need clean PET chips?{" "}
               <a className="link-arrow" href="#contact">
                 Tell us the type and quantity
               </a>

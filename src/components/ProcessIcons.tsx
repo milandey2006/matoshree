@@ -236,19 +236,24 @@ export function IconChips() {
   );
 }
 
-export function IconProducts() {
+export function IconSupply() {
   return (
     <Svg>
-      {/* unrolled sheet */}
-      <path d="M14 51 H62 L72 64 H24 Z" fill={CLEAR} />
-      <path d="M30 57.5 H66" strokeWidth={1.2} />
-      {/* roll */}
-      <ellipse cx="14" cy="36" rx="7" ry="15" fill={CLEAR} />
-      <rect x="14" y="21" width="30" height="30" fill={CLEAR} stroke="none" />
-      <path d="M14 21 H44 M14 51 H44" />
-      <ellipse cx="44" cy="36" rx="7" ry="15" fill={TINT} />
-      <ellipse cx="44" cy="36" rx="4.4" ry="9.5" />
-      <ellipse cx="44" cy="36" rx="2" ry="4.2" fill={GREEN} />
+      {/* bulk bag of chips */}
+      <path d="M17 26 V21 Q19 18.5 21 21 V26 M39 26 V21 Q41 18.5 43 21 V26" />
+      <path d="M12 52 V30 Q12 26 16 26 H44 Q48 26 48 30 V52 Z" fill={CLEAR} />
+      <rect x="21" y="34" width="18" height="11" rx="1" fill={TINT} />
+      <Flake x={23.5} y={37.5} r={-10} fill={GREEN} />
+      <Flake x={30.5} y={38} r={15} fill={GREEN} />
+      {/* truck */}
+      <path d="M8 52 H52 V58 H8 Z" fill={TINT} />
+      <path d="M52 40 H62 L70 48 V58 H52 Z" fill={TINT} />
+      <path d="M55.5 43 H61 L65.5 48 H55.5 Z" fill={CLEAR} />
+      <circle cx="20" cy="60" r="5" fill={CLEAR} />
+      <circle cx="60" cy="60" r="5" fill={CLEAR} />
+      <circle cx="20" cy="60" r="1.8" fill={GREEN} />
+      <circle cx="60" cy="60" r="1.8" fill={GREEN} />
+      <path d="M4 65 H76" />
     </Svg>
   );
 }

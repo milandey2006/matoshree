@@ -5,7 +5,6 @@ import { COMPANY } from "@/lib/company";
 const INTENTS = [
   "Sell scrap PET bottles",
   "Buy PET chips",
-  "Buy PET plastic rolls",
   "Something else",
 ];
 

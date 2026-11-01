@@ -27,14 +27,14 @@ const mono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.matoshreepolymers.com"),
-  title: "Matoshree Polymers Pvt. Ltd. — PET plastic rolls, plastic chips & trading",
+  title: "Matoshree Polymers Pvt. Ltd. — Scrap PET bottle trading & PET chips",
   description:
-    "Matoshree Polymers Pvt. Ltd. manufactures PET plastic rolls from scrap bottles, converts plastic waste into plastic chips, and trades in plastic bottle rolls. Bhupatinagar, Purba Medinipur, West Bengal.",
+    "Matoshree Polymers Pvt. Ltd. buys and trades scrap PET bottles, sorts and bales them, and turns them into clean PET chips. Bhupatinagar, Purba Medinipur, West Bengal.",
   keywords: [
     "Matoshree Polymers",
-    "PET plastic rolls",
-    "plastic bottle rolls",
-    "plastic chips",
+    "PET chips",
+    "PET flakes",
+    "PET bottle scrap",
     "scrap PET bottles",
     "plastic recycling West Bengal",
     "Purba Medinipur",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     url: "https://www.matoshreepolymers.com",
     siteName: "Matoshree Polymers Pvt. Ltd.",
     title: "Matoshree Polymers Pvt. Ltd.",
-    description: "PET plastic rolls from scrap bottles, plastic chips, and trading of plastic bottle rolls.",
+    description: "Scrap PET bottle trading, sorting and baling, and clean PET chips.",
     images: [{ url: "/logo.png", alt: "Matoshree Polymers logo" }],
   },
   icons: { icon: "/icon-mark.png", apple: "/icon-mark.png" },

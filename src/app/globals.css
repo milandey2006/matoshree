@@ -367,16 +367,7 @@ button, input, textarea, select { font: inherit; color: inherit; }
 }
 .section h2 em { font-style: italic; color: var(--green); }
 
-.company-body {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  align-items: center;
-  gap: clamp(40px, 6vw, 80px);
-}
-
-@media (max-width: 860px) {
-  .company-body { grid-template-columns: 1fr; justify-items: center; }
-}
+.company-body { display: flex; justify-content: center; }
 
 .section h2.h2--two-line { max-width: none; }
 
@@ -405,23 +396,6 @@ button, input, textarea, select { font: inherit; color: inherit; }
   color: var(--muted);
   font-size: 1.05rem;
   text-wrap: pretty;
-}
-
-.photo { width: 100%; max-width: 760px; }
-.photo img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border: 1px solid var(--rule);
-}
-.photo figcaption {
-  margin-top: 12px;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-  text-align: center;
 }
 
 @media (max-width: 760px) {
